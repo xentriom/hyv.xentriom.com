@@ -5,5 +5,10 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
     ...defaultMdxComponents,
     ...components,
+    code: ({ children, ...props }) => (
+      <code className="font-mono" {...props}>
+        {children}
+      </code>
+    ),
   };
 }

@@ -1,4 +1,4 @@
-import { DocsBody, DocsDescription, DocsPage, DocsTitle } from "fumadocs-ui/layouts/docs/page";
+import { DocsBody, DocsDescription, DocsPage, DocsTitle, PageLastUpdate } from "fumadocs-ui/layouts/docs/page";
 import { createRelativeLink } from "fumadocs-ui/mdx";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -11,10 +11,12 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
   const page = source.getPage(slug);
   if (!page) notFound();
 
-  const MDX = page.data.body;
+  // const MDX = page.data.body;
+  // const lastModified = await page.data.load();
+  const { body: MDX, toc, lastModified, full } = page.data;
 
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full}>
+    <DocsPage toc={page.data.toc} tableOfContent={{ style: "clerk" }} full={page.data.full}>
       <DocsTitle>{page.data.title}</DocsTitle>
       <DocsDescription className="mb-0">{page.data.description}</DocsDescription>
       <div className="flex flex-row gap-2 items-center border-b pb-6">
@@ -31,6 +33,7 @@ export default async function Page(props: PageProps<"/docs/[[...slug]]">) {
             a: createRelativeLink(source, page),
           })}
         />
+        {lastModified && <PageLastUpdate date={lastModified} />}
       </DocsBody>
     </DocsPage>
   );
