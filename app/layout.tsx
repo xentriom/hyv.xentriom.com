@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { NextProvider } from "fumadocs-core/framework/next";
 import { TreeContextProvider } from "fumadocs-ui/contexts/tree";
 import { RootProvider } from "fumadocs-ui/provider/next";
@@ -35,7 +36,10 @@ export default function Layout({ children }: LayoutProps<"/">) {
       <body className={`font-sans flex flex-col min-h-screen antialiased`}>
         <NextProvider>
           <TreeContextProvider tree={source.getPageTree()}>
-            <RootProvider>{children}</RootProvider>
+            <RootProvider>
+              {children}
+              <Analytics />
+            </RootProvider>
           </TreeContextProvider>
         </NextProvider>
       </body>
