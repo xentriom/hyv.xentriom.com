@@ -8,7 +8,7 @@ export function baseOptions(): BaseLayoutProps {
     nav: {
       title: (
         <>
-          <Image src="/logo.png" alt="HoYoVista" width={20} height={20} />
+          <Image src="/logo.png" alt="HoYoVista" width={20} height={20} className="rounded-md" />
           <span className="font-medium">HoYoVista</span>
         </>
       ),
@@ -47,7 +47,7 @@ export const iconLinks: LinkItemType[] = [
   },
   {
     type: "icon",
-    url: "https://github.com/xentriom/hyv.xentriom.com",
+    url: "https://github.com/ScobbleQ/HoYoVista",
     label: "github",
     text: "GitHub",
     external: true,

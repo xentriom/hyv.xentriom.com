@@ -1,0 +1,88 @@
+---
+title: HoYoLink
+description: Link your HoYoLAB account to HoYoVista
+---
+
+import { Step, Steps } from "fumadocs-ui/components/steps";
+
+## HoYoLink Command
+
+The `/hoyolink` command allows you to link or unlink your HoYoLAB account with HoYoVista. This is required for most bot features to work.
+
+### Usage
+
+```
+/hoyolink
+```
+
+### What It Does
+
+- Links your HoYoLAB account by storing your cookies securely
+- Automatically detects and links all your game accounts
+- Allows you to unlink your account if needed
+
+### Getting Your Cookies
+
+To link your account, you'll need your HoYoLAB cookies. The command includes a built-in guide, or you can follow these steps:
+
+<Steps>
+  <Step>Go to [HoYoLAB](https://www.hoyolab.com/home) and log in</Step>
+  <Step>Click your profile picture → **"Personal Homepage"**</Step>
+  <Step>Open browser DevTools (F12 or right-click → Inspect)</Step>
+  <Step>Go to the **"Network"** tab</Step>
+  <Step>Refresh the page (Ctrl+R or Cmd+R)</Step>
+  <Step>Filter for **"getGame"** and click **"getGameRecordCard"**</Step>
+  <Step>Under **"Request Headers"**, copy everything after **"Cookie:"**</Step>
+  <Step>Paste into the modal when linking</Step>
+</Steps>
+
+### Required Cookies
+
+The following cookies are required:
+
+- `ltmidV2`
+- `ltokenV2`
+- `ltuidV2`
+
+### After Linking
+
+Once linked, you'll see a list of recommended commands:
+
+- `/profile` - View statistics for your games
+- `/income` - View income for the selected month
+- `/roadmap` - View planned improvements and features
+- `/settings` - Access and modify your account settings
+
+### Unlinking
+
+To unlink your account:
+
+1. Use `/hoyolink` again
+2. Click **"Unlink HoYoLAB Account"**
+3. Confirm the action
+
+**Warning:** Unlinking will delete all your linked game data and cookies. This action cannot be reversed.
+
+### Security
+
+- Cookies are stored securely in the database
+- Only you can access your linked account
+- You can unlink at any time to remove your data
+
+### Troubleshooting
+
+**"No games found linked to this account"**
+
+- Ensure your HoYoLAB account has at least one game linked
+- Try refreshing your cookies
+
+**"Invalid or incomplete cookies"**
+
+- Make sure you copied the entire cookie string
+- Check that all required cookies are present
+- Try getting fresh cookies from HoYoLAB
+
+**"Error fetching game data"**
+
+- Your cookies may have expired
+- Try getting fresh cookies and linking again

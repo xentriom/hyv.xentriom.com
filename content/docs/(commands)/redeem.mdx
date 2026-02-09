@@ -1,0 +1,40 @@
+---
+title: Redeem
+description: Redeem codes for in-game rewards
+---
+
+## Redeem Command
+
+The `/redeem` command allows you to redeem promotional codes for in-game rewards. Currently under maintenance.
+
+### Usage
+
+```
+/redeem [account] [code]
+```
+
+### Parameters
+
+- **account** (optional): The game account to redeem codes for. If omitted, redeems for all linked games.
+- **code** (optional): Specific codes to redeem, separated by `-`, `|`, `/`, or `:`. If omitted, automatically fetches and redeems available codes.
+
+### Automatic Redemption
+
+You can enable automatic code redemption in `/settings`. When enabled, the bot will:
+
+- Automatically fetch new codes
+- Redeem them for your linked games
+- Send you a DM notification (if enabled)
+
+### Supported Games
+
+- Genshin Impact
+- Honkai: Star Rail
+- Zenless Zone Zero
+- Honkai Impact 3rd (not supported)
+
+### Requirements
+
+- Must be registered (`/register`)
+- Must have linked your HoYoLAB account (`/hoyolink`)
+- Must have at least one supported game linked

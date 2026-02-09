@@ -1,0 +1,77 @@
+---
+title: Data
+description: View and manage your account data
+---
+
+## Data Command
+
+The `/data` command allows you to view all data stored by HoYoVista for your account, including user settings, cookies, linked games, and recent events.
+
+### Usage
+
+```
+/data
+```
+
+### What It Shows
+
+The command displays your account data in JSON format, including:
+
+#### User Data
+
+- Account settings (privacy, notifications, data collection preferences)
+- Registration information
+- Account status
+
+#### HoYoLAB Cookies
+
+- Stored authentication cookies (if account is linked)
+- Cookie tokens and identifiers
+
+#### Linked Games
+
+- All games linked to your account
+- Game IDs, UIDs, regions
+- Per-game settings (auto check-in, auto redeem)
+
+#### Recent Events
+
+- Latest 2 events from your account
+- Command usage, check-ins, redemptions
+- Timestamps and metadata
+
+### Privacy
+
+- All data is displayed in ephemeral messages (only visible to you)
+- Sensitive information like full cookies is shown for your reference
+- You can use this to verify what data is stored
+
+### Data Management
+
+To delete your data:
+
+1. Use `/hoyolink` and unlink your account
+2. This will remove all cookies and linked game data
+3. Your user account will remain, but without linked games
+
+### Requirements
+
+- Must be registered (`/register`)
+- No linked account required (shows base data if not linked)
+
+### Cooldown
+
+5 minutes between data views
+
+### Use Cases
+
+- Verify what data is stored about you
+- Debug account issues
+- Check linked games and settings
+- Review recent bot interactions
+
+### Notes
+
+- Data is displayed in JSON format for technical accuracy
+- Recent events only show the latest 2 entries
+- Cookie data is sensitive - keep it private

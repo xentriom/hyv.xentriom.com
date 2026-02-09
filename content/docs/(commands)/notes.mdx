@@ -1,0 +1,91 @@
+---
+title: Notes
+description: View your Real-Time Notes for in-game resources
+---
+
+## Notes Command
+
+The `/notes` command displays real-time information about your in-game resources, including stamina, daily missions, weekly activities, and more.
+
+### Usage
+
+```
+/notes account:<game>
+```
+
+### Parameters
+
+- **account** (required): The game account to view notes for. Use autocomplete to select from your linked games.
+
+### Supported Games
+
+All major HoYoverse titles are supported:
+
+- Genshin Impact
+- Honkai: Star Rail
+- Honkai Impact 3rd
+- Zenless Zone Zero
+
+### Genshin Impact Notes
+
+Displays:
+
+- **Original Resin**: Current/max resin and time until full
+- **Enemies of Note**: Remaining resin cost-halving opportunities this week
+- **Daily Commission Reward**:
+  - Daily commission completion status
+  - Encounter points status
+  - Long-term encounter points stored
+- **Jar of Riches**: Realm currency and time until limit
+- **Parametric Transformer**: Cooldown status and days until available
+
+### Honkai: Star Rail Notes
+
+Displays:
+
+- **Trailblazer Powder**: Current/max stamina and restoration time
+- **Daily Training**: Current/max training score
+- **Echo of War**: Weekly attempts used/available
+- **Simulated Universe Points**: Current/max points
+- **Currency War Points**: Current/max weekly points
+
+### Honkai Impact 3rd Notes
+
+Displays:
+
+- **Stamina**: Current/max stamina and restoration time
+- **Daily BP**: Current/max training score
+- **Q-Manifold** or **Superstring Dimension**:
+  - Time left or status
+  - Current score and tier
+- **Memorial Arena**:
+  - Time left or lock status
+  - Challenge rewards progress
+  - SSS-rank rewards progress
+- **Elysian Realm**: Time left and current score
+
+### Zenless Zone Zero Notes
+
+Displays:
+
+- **Battery Charge**: Current/max energy and restoration time
+- **Daily Missions**:
+  - Engagement today
+  - Scratch Card Mania status
+  - Video Store Management status
+- **Season Missions**:
+  - Bounty Commission progress
+  - Ridu Weekly Points
+  - Refresh times
+
+### Real-Time Updates
+
+- All data is fetched in real-time from HoYoLAB
+- Times are displayed using Discord's relative time format
+- Data updates every time you run the command
+
+### Requirements
+
+- Must be registered (`/register`)
+- Must have linked your HoYoLAB account (`/hoyolink`)
+- Must have at least one linked game account

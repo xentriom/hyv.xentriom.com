@@ -2,11 +2,18 @@
   "pages": [
     "---Introduction---",
     "index",
-    "test",
     "what-is-hoyovista",
+    "supported-games",
+    "changelog",
+    "---Guides---",
+    "...(guides)",
     "---Commands---",
-    "(commands)/about",
-    "---Resources---",
-    "(resources)/links"
+    "...(commands)",
+    "---Information---",
+    "...(information)",
+    "---Links---",
+    "external:[Discord Server](https://discord.gg/5rUsSZTyf2)",
+    "external:[Invite HoYoVista](https://discord.com/oauth2/authorize?client_id=1267369071444492309)",
+    "external:[GitHub Repository](https://github.com/ScobbleQ/HoYoVista)"
   ]
 }

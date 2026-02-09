@@ -1,0 +1,143 @@
+---
+title: Getting HoYoLAB Cookies
+description: Step-by-step guide to obtain your HoYoLAB cookies
+---
+
+## Getting Your HoYoLAB Cookies
+
+To use HoYoVista, you need to link your HoYoLAB account by providing your cookies. This guide will walk you through the process step by step.
+
+### Why Are Cookies Needed?
+
+Cookies are required for HoYoVista to authenticate with HoYoLAB's API on your behalf. They allow the bot to:
+
+- Access your game accounts
+- Perform check-ins
+- View your profiles and statistics
+- Redeem codes
+- And more
+
+### Step-by-Step Instructions
+
+#### Step 1: Log in to HoYoLAB
+
+1. Go to [HoYoLAB](https://www.hoyolab.com/home)
+2. Log in to your account using your credentials
+
+#### Step 2: Open Your Personal Homepage
+
+1. Click on your **profile picture** in the top right corner
+2. Select **"Personal Homepage"** from the dropdown menu
+
+#### Step 3: Open Developer Tools
+
+Open your browser's developer tools using one of these methods:
+
+**Chrome/Edge (Windows/Linux):**
+
+- Press `F12`
+- Or press `Ctrl + Shift + I`
+- Or right-click → **"Inspect"**
+
+**Chrome/Edge (Mac):**
+
+- Press `Cmd + Option + I`
+- Or right-click → **"Inspect"**
+
+**Firefox (Windows/Linux):**
+
+- Press `F12`
+- Or press `Ctrl + Shift + I`
+
+**Firefox (Mac):**
+
+- Press `Cmd + Option + I`
+
+**Safari (Mac):**
+
+- Enable Developer menu: Preferences → Advanced → "Show Develop menu"
+- Press `Cmd + Option + I`
+
+#### Step 4: Navigate to Network Tab
+
+1. In the Developer Tools window, click on the **"Network"** tab
+2. Make sure the network tab is visible and ready
+
+#### Step 5: Refresh the Page
+
+1. Refresh the page using `Ctrl + R` (Windows/Linux) or `Cmd + R` (Mac)
+2. Or click the refresh button in your browser
+3. This will capture network requests
+
+#### Step 6: Filter for getGame
+
+1. In the Network tab, look for the **filter/search box**
+2. Type **`getGame`** in the filter box
+3. You should see a request labeled **"getGameRecordCard"**
+
+#### Step 7: Copy the Cookie
+
+1. Click on the **"getGameRecordCard"** request
+2. Look for the **"Request Headers"** section
+3. Find the **`Cookie:`** field
+4. Copy **everything after the word "Cookie:"** (the entire cookie string)
+
+The cookie string will look something like:
+
+```
+ltmid_v2=____; ltoken_v2=v2____; ltuid_v2=____; DEVICEFP=____; ...
+```
+
+#### Step 8: Link Your Account
+
+1. Go back to Discord
+2. Use the `/hoyolink` command
+3. Click **"Add HoYoLAB Account"**
+4. Paste the entire cookie string into the text field
+5. Submit the form
+
+### Required Cookies
+
+The following cookies are required for the bot to work:
+
+- `ltmidV2` (or `ltmid_v2`)
+- `ltokenV2` (or `ltoken_v2`)
+- `ltuidV2` (or `ltuid_v2`)
+
+If any of these are missing, you'll get an error message telling you which ones are missing.
+
+### Troubleshooting
+
+**Can't find the getGameRecordCard request?**
+
+- Make sure you're on your Personal Homepage
+- Try refreshing the page again
+- Check that the Network tab is capturing requests
+
+**Cookies are invalid or incomplete?**
+
+- Make sure you copied the entire cookie string
+- Don't include the word "Cookie:" itself
+- Try getting fresh cookies by logging out and back in
+
+**No games found?**
+
+- Ensure your HoYoLAB account has at least one game linked
+- Try refreshing your cookies
+- Make sure you're using the correct account
+
+### Sample Cookie Format
+
+Here's what a sample cookie string looks like (with values hidden):
+
+```
+ltmid_v2=____; ltoken_v2=v2____; ltuid_v2=____; DEVICEFP=____; HYV_LOGIN_PLATFORM_LIFECYCLE_ID={}; HYV_LOGIN_PLATFORM_LOAD_TIMEOUT={}; HYV_LOGIN_PLATFORM_TRACKING_MAP={}; _HYVUUID=____; _MHYUUID=____; mi18nLang=en-us; account_id_v2=____; account_mid_v2=____; cookie_token_v2=v2____; HYV_LOGIN_PLATFORM_OPTIONAL_AGREEMENT={}
+```
+
+### Need Help?
+
+If you're still having trouble:
+
+- Check the `/hoyolink` command's built-in guide (click the info button)
+- Join the [Discord server](https://discord.gg/WATyv9tkFC) for support
+- Use `/feedback` to report issues

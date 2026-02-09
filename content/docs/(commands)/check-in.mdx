@@ -1,0 +1,66 @@
+---
+title: Check-in
+description: Daily check-in from HoYoLAB
+---
+
+## Check-in Command
+
+The `/check-in` command allows you to claim your daily rewards from HoYoLAB for all your linked games.
+
+### Usage
+
+```
+/check-in [account]
+```
+
+### Parameters
+
+- **account** (optional): The specific game account to check in for. If omitted, checks in for all linked games.
+
+### What It Does
+
+- Claims daily check-in rewards from HoYoLAB
+- Shows the reward you received (name, amount, icon)
+- Displays missed days if applicable
+- Works for all supported games
+
+### Supported Games
+
+- Genshin Impact
+- Honkai: Star Rail
+- Honkai Impact 3rd
+- Zenless Zone Zero
+
+### Example Responses
+
+**Successful Check-in:**
+
+- Shows the game name and UID (censored if privacy is enabled)
+- Displays the reward name and quantity
+- Shows reward icon
+- Indicates if any days were missed
+
+**Failed Check-in:**
+
+- Shows error code and message
+- May indicate invalid cookies or account issues
+
+### Automatic Check-ins
+
+You can enable automatic daily check-ins in `/settings`. When enabled, the bot will automatically check in for your games each day between the configured times.
+
+### Cooldown
+
+30 minutes between manual check-ins
+
+### Requirements
+
+- Must be registered (`/register`)
+- Must have linked your HoYoLAB account (`/hoyolink`)
+- Must have at least one linked game account
+
+### Tips
+
+- Use the account autocomplete to quickly select a specific game
+- Check in daily to maximize your rewards
+- Enable automatic check-ins to never miss a day

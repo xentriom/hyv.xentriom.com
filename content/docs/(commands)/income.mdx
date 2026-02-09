@@ -1,0 +1,90 @@
+---
+title: Income
+description: View your monthly in-game income reports
+---
+
+## Income Command
+
+The `/income` command displays detailed monthly income reports showing how many resources you've earned in-game, broken down by source.
+
+### Usage
+
+```
+/income account:<game> month:<month>
+```
+
+### Parameters
+
+- **account** (required): The game account to view income for. Use autocomplete to select from your linked games.
+- **month** (required): The month to view income for. Shows the last 3 months by default.
+
+### Supported Games
+
+- **Genshin Impact**: Full income tracking
+- **Zenless Zone Zero**: Full income tracking
+- Honkai: Star Rail and Honkai Impact 3rd are not currently supported
+
+### Genshin Impact Income Report
+
+Displays:
+
+- **Primogems**: Total earned this month
+- **Mora**: Total earned this month
+- **Breakdown by Source**:
+  - Commissions
+  - Events
+  - Spiral Abyss
+  - And more
+- **Daily Summary**: Today's earnings (if current month)
+- **Comparison**: Percentage change from previous month
+- **Primary Source**: Your main source of Primogems this month
+
+### Zenless Zone Zero Income Report
+
+Displays:
+
+- **Polychromes**: Total earned this month
+- **Master Tapes**: Total earned this month
+- **Boopons**: Total earned this month
+- **Breakdown by Source**:
+  - Various revenue streams
+- **Primary Source**: Your main source of Polychromes this month
+
+### Data Delay
+
+- **Genshin Impact**: Data is delayed by approximately 1 hour
+- **Zenless Zone Zero**: Data is delayed by approximately 2 hours
+- The diary only includes resources obtained outside of top-ups
+
+### Month Selection
+
+The month autocomplete shows the last 3 months:
+
+- Current month
+- Previous month
+- Month before that
+
+### Example Output
+
+**Genshin Impact:**
+
+```
+## Income Overview: January
+- AR 60 | America | UID: 1234****
+💰 Primogems: 3,240
+💵 Mora: 1,250,000
+
+- Daily Commissions: 1,800 Primogems
+- Events: 900 Primogems
+- Spiral Abyss: 600 Primogems
+
+You have earned 120 Primogems and 50,000 Mora today, what a bountiful day!
+
+This month, your primary source for obtaining Primogems is through Daily Commissions, for a total of 1,800 Primogems, or 55% of your total.
+```
+
+### Requirements
+
+- Must be registered (`/register`)
+- Must have linked your HoYoLAB account (`/hoyolink`)
+- Must have at least one supported game linked

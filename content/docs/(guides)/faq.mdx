@@ -1,0 +1,80 @@
+---
+title: FAQ
+description: Frequently asked questions and troubleshooting
+---
+
+## General
+
+### Do I need to add the bot to use it?
+
+No. You just need to be in a Discord server where HoYoVista is already added. If you want to use the bot in DMs or add it to your own server, you can [invite it](https://discord.com/oauth2/authorize?client_id=1267369071444492309) - when you click the link, choose "Add to Server" instead of "Add to My Apps". This allows you to use the bot in DMs and across all your servers.
+
+### Is HoYoVista safe? Will it steal my account?
+
+Entering your cookies into HoYoVista is **your** decision. HoYoVista only uses your HoYoLAB cookies to talk to official HoYoLAB/HoYoverse APIs, the same way the HoYoLAB website does. The bot is open source on [GitHub](https://github.com/ScobbleQ/HoYoVista), so its behavior can be reviewed.
+
+### How does HoYoVista work?
+
+HoYoLAB uses cookies to authenticate your account. HoYoVista uses your cookies to simulate the same behavior as the HoYoLAB website to obtain and perform actions on your behalf.
+
+### Which games are supported?
+
+HoYoVista supports Genshin Impact, Honkai: Star Rail, Honkai Impact 3rd, and Zenless Zone Zero. Not every command supports every game. See [Supported Games](/docs/supported-games) for details.
+
+---
+
+## Account & Linking
+
+### "You are not registered"
+
+Use `/register` first. You must register before using `/hoyolink` or any other command that needs your account.
+
+### "No linked games found" / "No cookies found"
+
+Link your HoYoLAB account with `/hoyolink`. You need to provide your HoYoLAB cookies; see [Getting HoYoLAB Cookies](/docs/getting-cookies) for step-by-step instructions.
+
+### "The cookies provided are invalid or incomplete"
+
+- Copy the **entire** cookie string from the browser (everything after `Cookie:` in the request headers).
+- Make sure you have the required cookies: `ltmidV2`, `ltokenV2`, `ltuidV2`.
+- Try logging out of HoYoLAB and logging back in, then get fresh cookies and try again.
+
+### "No games found linked to this account"
+
+Your HoYoLAB account must have at least one game linked (via the HoYoLAB website or app). Add a game there first, then try linking again.
+
+---
+
+## Check-in
+
+### Check-in failed with an error code
+
+- **Already checked in today:** You may have already claimed; try again tomorrow.
+- **HoYoLAB/API issue:** Try again later. If it keeps failing, ask in the [Discord server](https://discord.gg/5rUsSZTyf2).
+
+### Can I check in for all my games at once?
+
+Yes. Use `/check-in` without choosing an account (or choose the option that means “all”) to check in for all linked games.
+
+### How do I turn on automatic check-in?
+
+Use `/settings` → Check-in Settings, then enable DM notifications (optional) and enable auto check-in for each game you want.
+
+---
+
+## Other Commands
+
+### Profile/Income/Notes don't show my game
+
+Some commands only support certain games (e.g. Profile and Income support Genshin Impact and Zenless Zone Zero). See [Supported Games](/docs/supported-games).
+
+### How do I delete my data?
+
+Unlink your HoYoLAB account with `/hoyolink` → Unlink. That removes your cookies and linked game data. For full details, see [Privacy & Data](/docs/privacy-and-data).
+
+---
+
+## Still stuck?
+
+- Use `/feedback` in Discord to send a message to the developer.
+- Join the [Discord server](https://discord.gg/5rUsSZTyf2) for community help and announcements.

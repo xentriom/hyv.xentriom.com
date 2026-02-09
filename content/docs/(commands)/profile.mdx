@@ -1,0 +1,71 @@
+---
+title: Profile
+description: View your game profile and statistics
+---
+
+## Profile Command
+
+The `/profile` command displays detailed information about your game account, including stats, achievements, and progress.
+
+### Usage
+
+```
+/profile account:<game>
+```
+
+### Parameters
+
+- **account** (required): The game account to view the profile for. Use autocomplete to select from your linked games.
+
+### Supported Games
+
+- **Genshin Impact**: Full profile support
+- **Zenless Zone Zero**: Full profile support
+- Honkai: Star Rail and Honkai Impact 3rd are not currently supported for this command
+
+### Genshin Impact Profile
+
+Displays:
+
+- **Player Info**: Nickname, Adventure Rank, region, UID
+- **Signature**: Your in-game signature
+- **Namecard**: Your current namecard as a banner
+- **Avatar**: Your profile picture
+- **Statistics**:
+  - Total Achievements
+  - Max Friendships
+  - Spiral Abyss progress (floor-chamber-stars)
+  - Imaginarium Theater progress
+  - Stygian Onslaught difficulty and time
+
+### Zenless Zone Zero Profile
+
+Displays:
+
+- **Player Info**: Nickname, level, region, UID
+- **Description**: Your in-game description
+- **Banner**: Your current banner card
+- **Avatar**: Your profile picture
+- **Statistics**:
+  - Personal Title
+  - Active Days
+  - Achievement Count
+  - Simulated Battle Trial progress
+  - Battle Trial: The Last Stand progress
+
+### Data Sources
+
+- Game data is fetched from HoYoLAB API
+- Character/enka data is fetched from [Enka.Network](https://enka.network) API
+- Data may take a few seconds to load
+
+### Privacy
+
+- UIDs are automatically censored if privacy blur is enabled in `/settings`
+- Only you can see your full profile information
+
+### Requirements
+
+- Must be registered (`/register`)
+- Must have linked your HoYoLAB account (`/hoyolink`)
+- Must have at least one supported game linked

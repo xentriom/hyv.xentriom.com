@@ -1,0 +1,94 @@
+---
+title: Settings
+description: Configure your HoYoVista account settings
+---
+
+## Settings Command
+
+The `/settings` command allows you to customize your HoYoVista experience, including notifications, privacy, data collection, and automatic features.
+
+### Usage
+
+```
+/settings
+```
+
+### Settings Categories
+
+The settings are organized into several categories accessible via a dropdown menu:
+
+#### General Settings
+
+**Update Notifications**
+
+- When enabled, you'll receive DMs about updates, new features, bug fixes, and important announcements
+- Requires Discord DMs to be enabled
+
+**Privacy Blur**
+
+- When enabled, sensitive information like UIDs will be hidden from other users in responses
+- Adds an extra layer of privacy protection
+- Your own data is always visible to you
+
+**Collect Analytics Data**
+
+- When enabled, anonymized usage data is collected to help improve the bot
+- Data helps identify bugs, usage patterns, and feature requests
+- Also enables personalized end-of-year wrapped (similar to Spotify Wrapped)
+
+#### Check-in Settings
+
+**DM Notifications**
+
+- Receive DMs when automatic check-ins occur
+- Requires Discord DMs to be enabled
+
+**Per-Game Auto Check-in**
+
+- Enable/disable automatic check-ins for each linked game individually
+- Check-ins occur automatically each day between configured times
+- Default times: 00:05 - 00:40 UTC
+
+#### Code Redemption Settings
+
+**DM Notifications**
+
+- Receive DMs when automatic code redemptions occur
+- Requires Discord DMs to be enabled
+
+**Per-Game Auto Redemption**
+
+- Enable/disable automatic code redemption for each linked game individually
+- Codes are fetched from external APIs and redeemed automatically
+
+#### Reset Settings
+
+- Reset all settings to default values
+- **Warning:** This action cannot be reversed
+- Requires confirmation before resetting
+
+### How to Use
+
+1. Use `/settings` to open the settings menu
+2. Select a category from the dropdown menu
+3. Click buttons to toggle settings on/off
+4. Changes are saved immediately
+
+### Rate Limiting
+
+- Settings updates are rate-limited to prevent abuse
+- Maximum 5 updates per 30 seconds
+- If rate-limited, wait for the cooldown period
+
+### Caching
+
+- Settings are cached for 5 minutes to improve performance
+- Cache is automatically cleared when you update settings
+- You may need to wait a moment for changes to fully propagate
+
+### Tips
+
+- Enable automatic check-ins to never miss daily rewards
+- Enable privacy blur if you share bot responses publicly
+- Enable analytics to help improve the bot (optional)
+- Configure notifications based on your preferences
