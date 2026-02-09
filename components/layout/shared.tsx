@@ -19,8 +19,8 @@ export function baseOptions(): BaseLayoutProps {
 export const linkItems: LinkItemType[] = [
   {
     icon: <AlbumIcon />,
-    text: "Blog",
-    url: "/blog",
+    text: "Dashboard",
+    url: "/dashboard",
     active: "nested-url",
   },
   {
@@ -28,11 +28,6 @@ export const linkItems: LinkItemType[] = [
     url: "/showcase",
     icon: <LayoutTemplate />,
     active: "url",
-  },
-  {
-    text: "Sponsors",
-    url: "/sponsors",
-    icon: <Heart />,
   },
 ];
 
