@@ -6,7 +6,7 @@ import {
   NavbarMenuLink,
   NavbarMenuTrigger,
 } from "fumadocs-ui/layouts/home/navbar";
-import { Book, ComponentIcon, Pencil, PlusIcon, Server } from "lucide-react";
+import { Book } from "lucide-react";
 import { linkItems, iconLinks, baseOptions } from "@/components/layout/shared";
 
 export default function Layout({ children }: LayoutProps<"/">) {

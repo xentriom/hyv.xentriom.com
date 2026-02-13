@@ -1,5 +1,4 @@
 {
   "title": "Information",
-  "pages": ["terms-of-service", "privacy-policy"],
-  "defaultOpen": false
+  "pages": ["terms-of-service", "privacy-policy"]
 }

@@ -1,5 +1,5 @@
 import type { BaseLayoutProps, LinkItemType } from "fumadocs-ui/layouts/shared";
-import { AlbumIcon, Heart, LayoutTemplate } from "lucide-react";
+import { AlbumIcon, LayoutTemplate } from "lucide-react";
 import Image from "next/image";
 import { Github, Discord } from "../nucleo";
 
